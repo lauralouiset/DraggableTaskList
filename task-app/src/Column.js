@@ -25,7 +25,6 @@ export default class Column extends React.Component {
         <Droppable droppableId={this.props.column.id}>
           {provided => (
             <TaskList ref={provided.innerRef} {...provided.droppableProps}>
-              {<div>hello</div>}
               {this.props.tasks.map((task, index) => {
                 return <Task key={task.id} task={task} index={index} />;
               })}
